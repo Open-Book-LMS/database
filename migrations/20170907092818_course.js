@@ -4,9 +4,10 @@ exports.up = function(knex, Promise) {
     table.increments('id').primary();
     table.text('code').notNullable();
     table.text('name').notNullable();
-    table.date('start_date').notNullable();
-    table.date('end_date').notNullable();
+    table.text('start_date').notNullable();
+    table.text('end_date').notNullable();
     table.text('timezone');
+    table.integer('grade_scale').notNullable();
   })
 };
 
